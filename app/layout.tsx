@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { Cairo } from "next/font/google";
+import { getLocale } from "next-intl/server";
 import { defaultLocale, locales, type Locale } from "@/lib/i18n";
 import "./globals.css";
 
@@ -14,14 +15,12 @@ export const metadata = {
   description: "Clinic management system frontend",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-  params,
 }: {
   children: ReactNode;
-  params?: { locale?: string };
 }) {
-  const requestedLocale = params?.locale;
+  const requestedLocale = await getLocale();
   const locale: Locale = locales.includes(requestedLocale as Locale)
     ? (requestedLocale as Locale)
     : defaultLocale;

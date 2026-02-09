@@ -9,7 +9,7 @@ export const generateStaticParams = () =>
 
 type RootLayoutProps = {
   children: ReactNode;
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 };
 
 export default async function LocaleLayout({
