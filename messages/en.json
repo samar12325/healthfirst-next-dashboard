@@ -1,0 +1,389 @@
+{
+  "app": {
+    "subtitle": "Medical Clinic"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "appointments": "Appointments",
+    "doctorSchedules": "Doctor schedules",
+    "patients": "Patients",
+    "medicalRecords": "Medical Records",
+    "users": "Users",
+    "roles": "Roles & Permissions",
+    "auditLog": "Audit Log",
+    "settings": "Settings"
+  },
+  "common": {
+    "accessDeniedTitle": "Access denied",
+    "accessDeniedMessage": "Please contact the system administrator to request access.",
+    "cancel": "Cancel",
+    "savePermissions": "Save permissions",
+    "logout": "Log out"
+  },
+  "auth": {
+    "login": {
+      "title": "Sign in",
+      "subtitle": "Access the clinic management system.",
+      "email": "Email",
+      "password": "Password",
+      "remember": "Remember me",
+      "forgot": "Forgot password?",
+      "submit": "Sign in"
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "subtitle": "Operational overview of today's performance.",
+    "globalOverview": {
+      "title": "Global overview",
+      "description": "Top-level KPIs across all clinics."
+    },
+    "widgets": {
+      "action": "Open module"
+    },
+    "upcoming": {
+      "title": "Upcoming appointments",
+      "description": "Quick view of today's scheduled visits."
+    },
+    "highlights": {
+      "title": "Operational highlights",
+      "description": "Live indicators to keep work on track."
+    },
+    "clinics": {
+      "title": "Clinics",
+      "description": "Select a clinic to open its dashboard.",
+      "action": "Open clinic dashboard",
+      "fields": {
+        "location": "Location",
+        "hours": "Working hours",
+        "specialties": "Specialties"
+      }
+    }
+  },
+  "clinic": {
+    "subtitle": "Clinic performance view for {location}.",
+    "info": {
+      "title": "Clinic information",
+      "description": "Core details about this clinic.",
+      "fields": {
+        "name": "Clinic name",
+        "location": "Location",
+        "hours": "Working hours",
+        "specialties": "Specialties"
+      }
+    },
+    "kpis": {
+      "title": "Clinic KPIs",
+      "description": "Operational metrics for this clinic."
+    }
+  },
+  "appointments": {
+    "title": "Appointments",
+    "subtitle": "Manage daily bookings and patient visits.",
+    "add": "Add appointment",
+    "listTitle": "Appointment list",
+    "listDescriptionAll": "Full view of upcoming appointments.",
+    "listDescriptionMine": "Only appointments tied to your doctor profile.",
+    "table": {
+      "patient": "Patient",
+      "doctor": "Doctor",
+      "date": "Date",
+      "time": "Time",
+      "status": "Status",
+      "action": "Action"
+    },
+    "status": {
+      "confirmed": "Confirmed",
+      "pending": "Pending",
+      "delayed": "Delayed",
+      "cancelled": "Cancelled",
+      "completed": "Completed",
+      "noShow": "No-show"
+    },
+    "actions": {
+      "view": "View",
+      "edit": "Edit",
+      "cancel": "Cancel"
+    },
+    "system": {
+      "title": "System-wide appointments",
+      "subtitle": "Monitor appointments across all clinics and spot pressure points.",
+      "controls": {
+        "title": "Top control bar",
+        "description": "Filter by clinic, time window, doctor, and status.",
+        "clinic": "Clinic",
+        "timeRange": "Time range",
+        "timeRangeOptions": {
+          "today": "Today",
+          "week": "This week",
+          "custom": "Custom date"
+        },
+        "customDate": "Custom date",
+        "doctor": "Doctor",
+        "status": "Appointment status",
+        "search": "Search",
+        "searchPlaceholder": "Search patient name or appointment ID",
+        "allClinics": "All clinics",
+        "allDoctors": "All doctors",
+        "allStatuses": "All statuses"
+      },
+      "kpis": {
+        "title": "Quick KPIs",
+        "description": "Metrics update based on the selected filters.",
+        "total": "Total appointments",
+        "active": "Active appointments",
+        "delayed": "Delayed",
+        "cancelled": "Cancelled",
+        "noShow": "No-show",
+        "waitAverage": "Average wait time"
+      },
+      "doctorSchedules": {
+        "title": "Doctor schedules",
+        "description": "Set working hours and slot duration for each doctor.",
+        "listLabel": "Doctors",
+        "detailsTitle": "Schedule settings",
+        "selectedDoctorLabel": "Selected doctor",
+        "summary": "{start} - {end} / every {minutes} min",
+        "emptyTitle": "No doctors to configure",
+        "emptyDescription": "Add appointments or doctor profiles to start scheduling.",
+        "fields": {
+          "start": "Shift start",
+          "end": "Shift end",
+          "interval": "Minutes between appointments",
+          "intervalPlaceholder": "20",
+          "intervalHelper": "Enter the gap in minutes."
+        }
+      },
+      "table": {
+        "title": "System appointments",
+        "description": "System-wide schedule with clinic context.",
+        "appointmentNumber": "Appointment #",
+        "clinic": "Clinic",
+        "city": "City",
+        "doctor": "Doctor",
+        "patient": "Patient",
+        "dateTime": "Date & time",
+        "waitDuration": "Wait duration",
+        "status": "Status",
+        "changeStatus": "Change status",
+        "waitValue": "{minutes} min"
+      }
+    },
+    "new": {
+      "title": "Add appointment",
+      "subtitle": "Create and schedule a new appointment.",
+      "form": {
+        "title": "Appointment details",
+        "description": "Provide the required appointment information."
+      },
+      "patientLookup": {
+        "title": "Patient lookup",
+        "description": "Enter the national ID or phone number to link an existing record.",
+        "identifierLabel": "National ID or phone",
+        "identifierPlaceholder": "e.g. 1023456789 or +9665XXXXXXXX",
+        "identifierHelper": "Lookup runs automatically as you type.",
+        "foundTitle": "Patient record found",
+        "foundDescription": "This appointment will be linked to {name}.",
+        "notFoundTitle": "No matching patient record",
+        "notFoundDescription": "You can create a new patient record and link it.",
+        "createAction": "Create new patient record",
+        "createTitle": "Basic patient details",
+        "createDescription": "Enter the minimum details to create the record.",
+        "createButton": "Create and link record",
+        "createSuccess": "Patient record created and linked.",
+        "fields": {
+          "name": "Patient name",
+          "phone": "Phone number",
+          "nationalId": "National ID"
+        },
+        "placeholders": {
+          "gender": "Unspecified"
+        }
+      },
+      "fields": {
+        "clinic": "Clinic",
+        "doctor": "Doctor",
+        "patient": "Patient name",
+        "date": "Appointment date",
+        "time": "Appointment time",
+        "channel": "Visit type",
+        "type": "Appointment type",
+        "notes": "Notes"
+      },
+      "options": {
+        "channel": {
+          "onSite": "On-site",
+          "telehealth": "Telehealth"
+        }
+      },
+      "actions": {
+        "save": "Save appointment",
+        "cancel": "Back to appointments"
+      }
+    }
+  },
+  "patients": {
+    "title": "Patients",
+    "subtitle": "Manage patient records and last visits.",
+    "listTitle": "Patient list",
+    "listDescription": "Review contact details and current status.",
+    "table": {
+      "patient": "Patient",
+      "age": "Age",
+      "lastVisit": "Last visit",
+      "medicalRecord": "Medical record",
+      "status": "Status",
+      "action": "Action"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "followUp": "Follow-up"
+    },
+    "medicalRecordHidden": "Hidden",
+    "viewProfile": "View profile",
+    "profile": {
+      "title": "Patient profile: {name}",
+      "subtitle": "Last visit: {date}",
+      "basicInfo": "Basic information",
+      "contactInfo": "Contact details",
+      "sensitiveTitle": "Sensitive data",
+      "sensitiveDescription": "Viewing medical details requires read permission.",
+      "noPermissionSensitive": "Medical data is hidden without the required permission.",
+      "notesTitle": "Follow-up notes",
+      "noPermissionNotes": "Notes are hidden because permission is missing.",
+      "fields": {
+        "age": "Age",
+        "gender": "Gender",
+        "patientId": "Patient ID",
+        "medicalRecordId": "Medical record ID",
+        "phone": "Phone",
+        "email": "Email",
+        "address": "Address",
+        "emergencyContact": "Emergency contact",
+        "insurance": "Insurance",
+        "allergies": "Allergies",
+        "allergiesNone": "None"
+      }
+    }
+  },
+  "medicalRecords": {
+    "title": "Medical records",
+    "subtitle": "Track care plans and diagnoses.",
+    "listTitle": "Record list",
+    "listDescription": "Manage medical files and update history.",
+    "table": {
+      "patient": "Patient",
+      "summary": "Summary",
+      "updatedAt": "Last updated",
+      "status": "Status",
+      "action": "Action",
+      "details": "Details"
+    },
+    "actions": {
+      "edit": "Edit"
+    },
+    "status": {
+      "open": "Open",
+      "closed": "Closed"
+    },
+    "details": {
+      "title": "Medical record: {name}",
+      "subtitle": "Last updated: {date}",
+      "edit": "Edit record",
+      "basicTitle": "Key information",
+      "summaryTitle": "Medical summary",
+      "medicationsTitle": "Current medications",
+      "allergiesTitle": "Recorded allergies",
+      "noAllergies": "No allergies recorded.",
+      "fields": {
+        "recordId": "Record ID",
+        "doctor": "Attending doctor",
+        "status": "Status",
+        "diagnosis": "Diagnosis"
+      },
+      "status": {
+        "open": "Open",
+        "closed": "Closed"
+      }
+    }
+  },
+  "users": {
+    "title": "Users",
+    "subtitle": "Manage team accounts and permissions.",
+    "listTitle": "User list",
+    "listDescription": "Review account details and roles.",
+    "table": {
+      "user": "User",
+      "role": "Role",
+      "lastActive": "Last active",
+      "status": "Status",
+      "action": "Action",
+      "details": "Details"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "invited": "Invitation pending"
+    },
+    "details": {
+      "title": "User details: {name}",
+      "subtitle": "Update account data and assign permissions.",
+      "profile": "User profile",
+      "permissionsTitle": "Assign permissions",
+      "permissionsDescription": "Update permissions based on the user's role.",
+      "presetsTitle": "Role presets",
+      "presetsDescription": "Ready-made templates for quick assignment.",
+      "fields": {
+        "email": "Email",
+        "role": "Current role",
+        "department": "Department",
+        "phone": "Phone",
+        "lastActive": "Last active",
+        "status": "Status",
+        "statusActive": "Active",
+        "statusInactive": "Inactive"
+      }
+    }
+  },
+  "roles": {
+    "title": "Roles & permissions",
+    "subtitle": "Group permissions and create role presets.",
+    "groupsTitle": "Permission groups",
+    "groupsDescription": "Organize permissions by operational area.",
+    "presetsTitle": "Role presets",
+    "presetsDescription": "Suggested templates for faster assignment.",
+    "permissionsCount": "{count} permissions in this role"
+  },
+  "auditLog": {
+    "title": "Audit log",
+    "subtitle": "Full record of sensitive system activity.",
+    "listTitle": "Recent events",
+    "listDescription": "Track changes to ensure compliance and quality.",
+    "table": {
+      "action": "Action",
+      "user": "User",
+      "date": "Date",
+      "ip": "IP address",
+      "status": "Status"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "subtitle": "System preferences and configuration.",
+    "clinicInfo": {
+      "title": "Clinic information",
+      "description": "Update official contact details.",
+      "name": "Clinic name",
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "update": "Update information"
+    },
+    "language": {
+      "title": "Language",
+      "description": "Customize the primary interface language.",
+      "label": "Choose your preferred language"
+    }
+  }
+}

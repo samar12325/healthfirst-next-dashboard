@@ -1,26 +1,61 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --page-bg: #f4f7fb;
+  --surface: #ffffff;
+  --surface-muted: #eef3f6;
+  --surface-muted-strong: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --accent: #2ec4b6;
+  --accent-strong: #1ba59a;
+  --border: #e2e8f0;
+  --sidebar-bg: #1f2937;
+  --shadow-card: 0 20px 45px rgba(15, 23, 42, 0.08);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--page-bg);
+  --color-foreground: var(--text-primary);
+  --font-sans: var(--font-cairo);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  background: radial-gradient(circle at 15% 10%, #e6f5f3 0%, transparent 45%),
+    radial-gradient(circle at 85% 0%, #ebefff 0%, transparent 40%),
+    var(--page-bg);
+  color: var(--text-primary);
+  font-family: var(--font-cairo), sans-serif;
+}
+
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .app-shell {
+    flex-direction: row-reverse;
+  }
+}
+
+:root[dir="ltr"] .app-shell {
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  :root[dir="ltr"] .app-shell {
+    flex-direction: row;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }

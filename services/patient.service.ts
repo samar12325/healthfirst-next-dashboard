@@ -1,0 +1,133 @@
+import type { Patient, PatientProfile } from "@/types/models";
+
+const patients: Patient[] = [
+  {
+    id: "pat-2001",
+    name: "خالد علي",
+    age: 35,
+    gender: "ذكر",
+    phone: "+966 555 120 111",
+    nationalId: "1023456789",
+    email: "khaled.ali@mail.com",
+    status: "active",
+    lastVisit: "2026-01-10",
+    medicalRecordId: "mr-3001",
+  },
+  {
+    id: "pat-2002",
+    name: "سارة عمر",
+    age: 29,
+    gender: "أنثى",
+    phone: "+966 555 120 222",
+    nationalId: "1045678901",
+    email: "sara.omer@mail.com",
+    status: "follow_up",
+    lastVisit: "2026-01-08",
+    medicalRecordId: "mr-3002",
+  },
+  {
+    id: "pat-2003",
+    name: "مريم صالح",
+    age: 41,
+    gender: "أنثى",
+    phone: "+966 555 120 333",
+    nationalId: "1098765432",
+    email: "mariam.saleh@mail.com",
+    status: "active",
+    lastVisit: "2026-01-06",
+    medicalRecordId: "mr-3003",
+  },
+  {
+    id: "pat-2004",
+    name: "أحمد ناصر",
+    age: 52,
+    gender: "ذكر",
+    phone: "+966 555 120 444",
+    nationalId: "1076543210",
+    email: "ahmed.nasser@mail.com",
+    status: "inactive",
+    lastVisit: "2025-12-22",
+    medicalRecordId: "mr-3004",
+  },
+];
+
+const patientProfiles: PatientProfile[] = [
+  {
+    id: "pat-2001",
+    name: "خالد علي",
+    age: 35,
+    gender: "ذكر",
+    phone: "+966 555 120 111",
+    nationalId: "1023456789",
+    email: "khaled.ali@mail.com",
+    status: "active",
+    lastVisit: "2026-01-10",
+    medicalRecordId: "mr-3001",
+    address: "شارع الملك فهد، الرياض",
+    emergencyContact: "أحمد علي (الأخ) - 0555120999",
+    insurance: "التأمين الوطني - الفئة الذهبية",
+    allergies: ["البنسلين"],
+    notes: "يتابع ضغط الدم بانتظام.",
+  },
+  {
+    id: "pat-2002",
+    name: "سارة عمر",
+    age: 29,
+    gender: "أنثى",
+    phone: "+966 555 120 222",
+    nationalId: "1045678901",
+    email: "sara.omer@mail.com",
+    status: "follow_up",
+    lastVisit: "2026-01-08",
+    medicalRecordId: "mr-3002",
+    address: "حي الندى، الرياض",
+    emergencyContact: "ريم عمر (الأخت) - 0555120888",
+    insurance: "ميدغلف - الفئة الفضية",
+    allergies: ["غبار موسمي"],
+    notes: "تحتاج متابعة بعد أسبوعين.",
+  },
+  {
+    id: "pat-2003",
+    name: "مريم صالح",
+    age: 41,
+    gender: "أنثى",
+    phone: "+966 555 120 333",
+    nationalId: "1098765432",
+    email: "mariam.saleh@mail.com",
+    status: "active",
+    lastVisit: "2026-01-06",
+    medicalRecordId: "mr-3003",
+    address: "طريق الملك عبدالعزيز، جدة",
+    emergencyContact: "عبدالله صالح (الزوج) - 0555120777",
+    insurance: "بوبا - الفئة البلاتينية",
+    allergies: [],
+    notes: "تستخدم علاجًا وقائيًا للربو.",
+  },
+  {
+    id: "pat-2004",
+    name: "أحمد ناصر",
+    age: 52,
+    gender: "ذكر",
+    phone: "+966 555 120 444",
+    nationalId: "1076543210",
+    email: "ahmed.nasser@mail.com",
+    status: "inactive",
+    lastVisit: "2025-12-22",
+    medicalRecordId: "mr-3004",
+    address: "حي الشاطئ، الدمام",
+    emergencyContact: "نورة ناصر (الابنة) - 0555120666",
+    insurance: "تكافل الراجحي - الفئة الأساسية",
+    allergies: ["الأسبرين"],
+    notes: "لم يحضر الموعد الأخير.",
+  },
+];
+
+export const getPatients = (): Patient[] => {
+  // Backend integration: replace with patients API.
+  return patients;
+};
+
+export const getPatientProfile = (id: string): PatientProfile | null => {
+  // Backend integration: replace with patient profile API.
+  return patientProfiles.find((profile) => profile.id === id) ?? null;
+};
