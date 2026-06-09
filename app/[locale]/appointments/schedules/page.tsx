@@ -10,7 +10,7 @@ import { hasPermission } from "@/lib/permissions";
 import { getAppointments } from "@/services/appointment.service";
 
 type DoctorSchedulesPageProps = {
-  params: { locale: Locale };
+  params: Promise<{ locale: Locale }>;
 };
 
 export default function DoctorSchedulesPage({

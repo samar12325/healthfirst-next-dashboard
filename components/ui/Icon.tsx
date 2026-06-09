@@ -1,3 +1,4 @@
+import type { ReactElement } from "react";
 import type { IconName } from "@/lib/constants";
 
 type IconProps = {
@@ -5,7 +6,7 @@ type IconProps = {
   className?: string;
 };
 
-const iconMap: Record<IconName, JSX.Element> = {
+const iconMap: Record<IconName, ReactElement> = {
   grid: (
     <path
       d="M4 4h6v6H4V4Zm10 0h6v6h-6V4ZM4 14h6v6H4v-6Zm10 0h6v6h-6v-6Z"

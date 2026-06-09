@@ -9,7 +9,7 @@ import { hasPermission } from "@/lib/permissions";
 import { getMedicalRecordById } from "@/services/medical-record.service";
 
 type MedicalRecordDetailsProps = {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 };
 
 export default async function MedicalRecordDetailsPage({

@@ -2,7 +2,7 @@ import { redirect } from "next/navigation";
 import { defaultLocale, type Locale } from "@/lib/i18n";
 
 type HomePageProps = {
-  params: { locale: Locale };
+  params: Promise<{ locale: Locale }>;
 };
 
 export default async function Home({ params }: HomePageProps) {

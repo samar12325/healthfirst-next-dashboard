@@ -9,7 +9,7 @@ import { type Locale } from "@/lib/i18n";
 import { getClinicById } from "@/services/clinic.service";
 
 type ClinicPageProps = {
-  params: { locale: Locale; id: string };
+  params: Promise<{ locale: Locale; id: string }>;
 };
 
 export default function ClinicPage({ params }: ClinicPageProps) {

@@ -18,7 +18,7 @@ import {
 } from "@/services/dashboard.service";
 
 type DashboardPageProps = {
-  params: { locale: Locale };
+  params: Promise<{ locale: Locale }>;
 };
 
 export default function DashboardPage({ params }: DashboardPageProps) {

@@ -8,7 +8,7 @@ import { type Locale } from "@/lib/i18n";
 import { getPermissionGroups, getRolePresets } from "@/services/user.service";
 
 type RolesPageProps = {
-  params: { locale: Locale };
+  params: Promise<{ locale: Locale }>;
 };
 
 export default function RolesPage({ params }: RolesPageProps) {

@@ -17,7 +17,7 @@ import {
 } from "@/services/user.service";
 
 type UserDetailsPageProps = {
-  params: { id: string; locale: Locale };
+  params: Promise<{ id: string; locale: Locale }>;
 };
 
 export default function UserDetailsPage({ params }: UserDetailsPageProps) {

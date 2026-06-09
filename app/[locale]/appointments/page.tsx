@@ -20,7 +20,7 @@ import {
 } from "@/services/appointment.service";
 
 type AppointmentsPageProps = {
-  params: { locale: Locale };
+  params: Promise<{ locale: Locale }>;
 };
 
 const uniqueValues = (values: string[]) => Array.from(new Set(values));

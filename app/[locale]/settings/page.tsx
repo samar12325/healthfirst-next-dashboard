@@ -14,7 +14,7 @@ import {
 } from "@/services/settings.service";
 
 type SettingsPageProps = {
-  params: { locale: Locale };
+  params: Promise<{ locale: Locale }>;
 };
 
 export default function SettingsPage({ params }: SettingsPageProps) {

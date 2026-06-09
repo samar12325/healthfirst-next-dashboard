@@ -11,7 +11,7 @@ import { getAppointments } from "@/services/appointment.service";
 import { getPatients } from "@/services/patient.service";
 
 type NewAppointmentPageProps = {
-  params: { locale: Locale };
+  params: Promise<{ locale: Locale }>;
 };
 
 export default function NewAppointmentPage({ params }: NewAppointmentPageProps) {

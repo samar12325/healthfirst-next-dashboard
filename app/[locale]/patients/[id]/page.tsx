@@ -9,7 +9,7 @@ import { hasPermission } from "@/lib/permissions";
 import { getPatientProfile } from "@/services/patient.service";
 
 type PatientProfilePageProps = {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 };
 
 export default function PatientProfilePage({
